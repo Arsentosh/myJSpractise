@@ -4,6 +4,8 @@ const clickMeBtn = document.querySelector(".click-me");
 let currentValue = 0;
 // const randomNumber = Math.floor(Math.random() * 100);
 
+const marginTopStyles = clickMeBtn.style.marginTop;
+const margiLeftStyles = clickMeBtn.style.marginTop;
 clickMeBtn.addEventListener("click", () => {
   currentValue += 1;
   counter.textContent = currentValue;
