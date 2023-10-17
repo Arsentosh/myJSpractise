@@ -8,6 +8,8 @@ const paperBtn = document.querySelector(".paper-btn");
 const gameHistoryList = document.querySelector(".game-history");
 let usersThing;
 
+// usersThing.classList.add("users-thing");
+
 rockBtn.addEventListener("click", () => {
   usersThing = "rock";
   playGame(usersThing);
@@ -74,8 +76,13 @@ function playGame(usersThing) {
   // }
 
   const listItem = document.createElement("li");
-  listItem.textContent = `You chose ${usersThing}, bot chose ${robotThing}. ${result}`;
-  gameHistoryList.appendChild(listItem);
+  if (result === "You lost. Better luck next time!") {
+    listItem.textContent = `You chose ${usersThing} but robot chose ${robotThing}. ${result}`;
+    gameHistoryList.appendChild(listItem);
+  } else {
+    listItem.textContent = `You chose ${usersThing} and robot chose ${robotThing}. ${result}`;
+    gameHistoryList.appendChild(listItem);
+  }
 
   if (result === "You won!") {
     listItem.classList.add("green");

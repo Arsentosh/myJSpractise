@@ -1,3 +1,21 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 330px;
+  padding: 8px;
+  flex-direction: column;
+}
+
+.things-via-js {
+  display: flex;
+  flex-direction: column;
+}
+
 .box {
   display: flex;
   align-items: center;
@@ -13,16 +31,37 @@
 }
 
 .click-me {
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: aliceblue;
   font-size: 20px;
-  min-width: 100px;
-  height: 50px;
+  font-weight: 700;
+  min-width: 108px;
+  height: 52px;
   border-radius: 8px;
-  background-color: red;
+  background-color: rgb(43, 146, 255);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-color: red;
+  border: none;
   user-select: none;
+  /* text-transform: uppercase; */
+  padding: 4px;
+  transition-duration: 0.4s;
+}
+
+.click-me:hover {
+  background-color: rgb(0, 112, 232);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* .click-me:hover {
+  background-color: rgba(0, 106, 219, 0);
+  color: rgb(43, 146, 255);
+} */
+
+.candlink {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .counter {
@@ -31,12 +70,6 @@
   font-size: 40px;
   font-weight: 700;
   user-select: none;
-}
-
-.candlink {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
 }
 
 .go-back {
@@ -65,7 +98,7 @@
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  gap: 44px;
+  gap: 28px;
   padding: 0;
 }
 
@@ -90,9 +123,106 @@
 }
 
 .list-item.green {
-  color: rgb(0, 180, 0);
+  color: rgb(0, 197, 0);
 }
 
 .list-item.red {
-  color: red;
+  color: rgb(237, 0, 0);
 }
+
+.users-thing {
+  background-color: aqua;
+}
+
+.btn-add {
+  font-size: 20px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  font-size: 16px;
+  background-color: #00b36b;
+  color: #fff;
+  border: none;
+  padding: 4px;
+  width: 100px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #00a149;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.span-text {
+  font-size: 28px;
+}
+
+/* Increase the size of the checkbox */
+#taskList input[type="checkbox"] {
+  transform: scale(2);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn-delete {
+  font-size: 20px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  font-size: 16px;
+  background-color: #ff2a00;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #dc2500;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pole {
+  display: flex;
+  flex-direction: row;
+}
+
+#taskInput {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+#taskInput:focus {
+  border-color: #007bff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* #addTaskButton {
+  font-size: 16px;
+  background-color: #007bff;
+
+  color: #fff;
+  border: none;
+  padding: 4px;
+  width: 100px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#addTaskButton:hover {
+  background-color: #0056b3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
