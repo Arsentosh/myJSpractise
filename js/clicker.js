@@ -10,7 +10,7 @@ clickMeBtn.addEventListener("click", () => {
   currentValue += 1;
   counter.textContent = currentValue;
 
-  if (window.innerWidth < 428) {
+  if (window.innerWidth < 429) {
     clickMeBtn.style.marginTop = `${Math.floor(Math.random() * 960)}px`;
     clickMeBtn.style.marginLeft = `${Math.floor(Math.random() * 410)}px`;
   } else if (window.innerWidth < 769) {
